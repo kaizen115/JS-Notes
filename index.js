@@ -230,7 +230,7 @@ console.log(phoneNumber);
 // --------------------------------------------------------------------------
 // SLICE - Extracts a section of a string and returns it as a new string, without modifying the original string.
 // --------------------------------------------------------------------------
-
+/*
 
 let fullName = "Snoop Dogg";
 let firstName;
@@ -241,3 +241,159 @@ lastName = fullName.slice(fullName.indexOf(" ") + 1);
 
 console.log(firstName);
 console.log(lastName);
+
+*/
+// --------------------------------------------------------------------------
+// Method Chaining - calling one method after another in one continious line of code
+// --------------------------------------------------------------------------
+/*
+
+let userName = "Gav";
+
+// let letter = userName.charAt(0);
+// letter = letter.toUpperCase(); // instead of 2 lines, you could consolidate into one and chain methods continiously
+
+let letter = userName.charAt(0).toUpperCase();
+
+console.log(letter);
+
+*/
+// --------------------------------------------------------------------------
+// If statement - A basic form of decision making - if a condition is true, then do something, if not, then don't do it.
+// --------------------------------------------------------------------------
+/*
+
+let age = 65;
+
+if (age >=65) {
+    console.log("You are a senior citizen");
+}
+else if(age >= 18){
+    console.log("You are an adult");
+}
+else if (age < 0){
+    console.log("You haven't been born yet")
+}
+else {
+    console.log("You are a child");
+}
+
+// --------------------------------------------------------------------------
+CHECKING BOOLEAN VALUES
+// --------------------------------------------------------------------------
+
+let online = false;
+
+if (online) {
+    console.log("You are online");
+}
+else {
+    console.log("You are offline");
+}
+
+*/
+// --------------------------------------------------------------------------
+// Checked Property (following checkbox or radio button with .checked)
+// --------------------------------------------------------------------------
+/*
+
+// CHECKBOX
+
+document.getElementById("myButton").onclick = function(){
+
+    const myCheckBox = document.getElementById("myCheckBox");
+
+    if(myCheckBox.checked){
+        console.log("You are subscribed");
+    }
+    else {
+        console.log("You are not subscribed");
+    }
+
+// --------------------------------------------------------------------------
+// RADIO BUTTONS
+
+    const visaBtn = document.getElementById("visaBtn");
+    const mastercardBtn = document.getElementById("mastercardBtn");
+    const paypalBtn = document.getElementById("paypalBtn");
+
+    if(visaBtn.checked){
+        console.log("You are paying with Visa");
+    }
+    else if(mastercardBtn.checked){
+        console.log("You are paying with Mastercard");
+    }
+    else if(paypalBtn.checked){
+        console.log("You are paying with Paypal");
+    }
+    else {
+        console.log("You must select a payment type");
+    }
+}
+
+*/
+// --------------------------------------------------------------------------
+// Switch - Statement that examines a value for a match against many case clauses. More effecient than many "else if" statements.
+// --------------------------------------------------------------------------
+/*
+
+let grade = 90;
+
+switch(true){
+    case grade >= 90:
+        console.log("You did great");
+        break;
+    case grade >= 80:
+        console.log("You did good");
+        break;  
+    case grade >= 70:
+        console.log("You did okay");
+        break; 
+    case grade >= 60:
+        console.log("You passed");
+        break;
+    case grade <= 59:
+        console.log("You failed");
+        break;
+    default:
+        console.log(grade, "is not a grade");
+}
+
+*/
+// --------------------------------------------------------------------------
+// LOGICAL OPERATORS - Gives the ability to check more than one condition concurrently 
+// && = AND (ALL conditions must be true)
+// || = OR (Either condition can be true)
+// --------------------------------------------------------------------------
+/*
+
+// && AND
+
+let temp = 65;
+let sunny = false;
+
+if(temp > 50 && temp < 90 && sunny){
+    console.log("The weather is good");
+}
+else{
+    console.log("The weather is bad");
+}
+
+
+// -------------------------------------------------------------------------- 
+
+// || OR
+
+let temp = 55;
+
+if(temp <= 50 || temp >= 90){
+    console.log("The weather is bad");
+}
+else{
+    console.log("The weather is good");
+}
+
+*/
+// --------------------------------------------------------------------------
+// 
+// --------------------------------------------------------------------------
