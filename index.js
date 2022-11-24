@@ -424,6 +424,7 @@ else {
 */
 // --------------------------------------------------------------------------
 // WHILE LOOP - Repeat some code while the condition is true (potentially infinitely)
+// Generally better for when you need to repeat continiously
 // --------------------------------------------------------------------------
 /*
 
@@ -439,9 +440,93 @@ console.log("Hello", userName);
 // --------------------------------------------------------------------------
 // DO WHILE LOOP - Do something, then check the condition, repeat if the condition is true
 // --------------------------------------------------------------------------
+/*
 
 do  {
     userName = window.prompt("Enter your name");
 } while (userName == "")
 
 console.log("Hello", userName);
+
+*/
+// --------------------------------------------------------------------------
+// FOR LOOPS - Repeat some code a certain amount of times
+// More suitable for repeating code a CERTAIN number of times
+// --------------------------------------------------------------------------
+/*
+
+for (let i = 10; i > 0; i -=1) { // Starts at ten, ends at 1, by a factor of 1
+    console.log(i);
+}
+console.log("Countdown Finished");
+
+*/
+// --------------------------------------------------------------------------
+// Break = Breaks out of a loop entirely
+// Continue = skip an iteration of a loop
+// --------------------------------------------------------------------------
+/*
+
+// BREAK - Stops at given point
+
+for (let i =1; i<=20; i+=1){
+    if(i == 13){
+        break; 
+    }
+
+// --------------------------------------------------------------------------
+
+// CONTINUE - SKIPS given point
+
+for (let i =1; i<=20; i+=1){
+    if(i == 13){
+        continue; 
+    }
+    console.log(i);
+}
+
+*/
+// --------------------------------------------------------------------------
+// NESTED LOOP = A loop inside of another loop
+// --------------------------------------------------------------------------
+/* 
+
+let symbol = window.prompt("Enter a symbol to use");
+let rows =  window.prompt('Enter a # of rows');
+let columns = window.prompt('Enter a # of columns');
+
+for(let i = 1; i <= rows; i+=1){
+    for(let j = 1; j <= columns; j+=1){
+        document.getElementById("myRectangle").innerHTML += symbol;
+    }
+    document.getElementById("myRectangle").innerHTML += "<br>";
+}
+
+*/
+// --------------------------------------------------------------------------
+// FUNCTIONS - Define code once, and use it many times
+// To perform some code, call the function name
+// --------------------------------------------------------------------------
+/*
+
+startProgram();
+
+function startProgram(){
+    let userName = "Asahel";
+    let age = 19
+
+    happyBirthday(userName, age); // To pass values or variables to a function, match your parameters in the function parentheses - otherwise the function will not recognize them
+}
+
+function happyBirthday(a, b){ // Matching parameters / shortened the arguments to "a" and "b"
+    console.log("Happy birthday to you");
+    console.log("Happy birthday to you");
+    console.log("Happy birthday dear", a);
+    console.log("Happy birthday to you");
+    console.log("You are", b, " years old");
+}
+
+*/
+// --------------------------------------------------------------------------
+// RETURN - returns a value back to the place where you invoked the function
+// --------------------------------------------------------------------------
