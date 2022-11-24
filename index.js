@@ -395,5 +395,53 @@ else{
 
 */
 // --------------------------------------------------------------------------
-// 
+// LOGICAL OPERATOR - 
+// ! = NOT - Typically used to reverse a conditions boolean value (true -> false and vice versa)
 // --------------------------------------------------------------------------
+/*
+
+let temp = 40;
+
+if(!(temp > 65)) {
+    console.log("It's cold outside");
+}
+else {
+    console.log("It's warm outside");
+}
+
+// --------------------------------------------------------------------------
+
+let sunny = true;
+
+if(!sunny) {
+    console.log("It's sunny outside");
+}
+
+else {
+    console.log("It's cloudy outside");
+}
+
+*/
+// --------------------------------------------------------------------------
+// WHILE LOOP - Repeat some code while the condition is true (potentially infinitely)
+// --------------------------------------------------------------------------
+/*
+
+let userName = "";
+
+while(userName == "" || userName == null){
+    userName = window.prompt("Enter your name")
+}
+
+console.log("Hello", userName);
+
+*/
+// --------------------------------------------------------------------------
+// DO WHILE LOOP - Do something, then check the condition, repeat if the condition is true
+// --------------------------------------------------------------------------
+
+do  {
+    userName = window.prompt("Enter your name");
+} while (userName == "")
+
+console.log("Hello", userName);
