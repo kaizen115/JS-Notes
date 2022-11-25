@@ -618,5 +618,55 @@ console.log(text);
 
 */
 // --------------------------------------------------------------------------
-// 
+// toLocacleString() - returns a string with a language sensitive representation of this number
+// number.toLocaleString(locale, {options});
+// 'locale' - specify that language (undefined - default set in browser)
+// 'options' = object with formatting options
+// --------------------------------------------------------------------------
+/*
+
+let myNum = 100
+
+myNum = myNum.toLocaleString("en-US"); // US English
+myNum = myNum.toLocaleString("hi-IN"); // Hindi
+myNum = myNum.toLocaleString("de-DE"); // Standard German
+
+myNum = myNum.toLocaleString("en-US", {style: "currency", currency: "USD"}); // USD
+myNum = myNum.toLocaleString("hi-IN", {style: "currency", currency: "INR"}); // Rupees
+myNum = myNum.toLocaleString("de-DE", {style: "currency", currency: "EUR"}); // Euros
+
+myNum = myNum.toLocaleString(undefined, {style: "percent"}); // 1 = 100%
+
+myNum = myNum.toLocaleString(undefined, {style: "unit", unit: "celsius"}); // Celsius / KG / Etc
+
+console.log(myNum);
+
+*/
+// --------------------------------------------------------------------------
+// NUMBER GUESSING GAME
+// --------------------------------------------------------------------------
+/*
+
+const answer = Math.floor(Math.random() * 10 + 1);
+let guesses = 0;
+
+document.getElementById("submitButton").onclick = function () {
+    let guess = document.getElementById("guessField").value
+    guesses += 1;
+
+    if(guess == answer){
+        alert(`${answer} is the #. It took you ${guesses} guesses`);
+    }
+
+    else if(guess < answer) {
+        alert("Too small!");
+    }
+    else {
+        alert("Too large!");
+    }
+}
+
+*/
+// --------------------------------------------------------------------------
+// Temperature Conversion Program
 // --------------------------------------------------------------------------
