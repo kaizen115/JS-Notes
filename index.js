@@ -670,3 +670,106 @@ document.getElementById("submitButton").onclick = function () {
 // --------------------------------------------------------------------------
 // Temperature Conversion Program
 // --------------------------------------------------------------------------
+/*
+
+// HTML
+
+<label>Enter a temp</label><br>
+    <input type="text" id="textBox"><br>
+    <label>Convert to:</label>
+
+    <input type="radio" id="cButton" name="unit">
+    <label>Celsius</label>
+
+    <input type="radio" id="fButton" name="unit">
+    <label>Fahrenheit</label><br>
+
+    <button type="button" id="submitButton">Submit</button> 
+    <label id="tempLabel"></label>
+
+// --------------------------------------------------------------------------
+// JS
+
+document.getElementById("submitButton").onclick = function() {
+
+    let temp;
+
+    if(document.getElementById("cButton").checked){
+        temp = document.getElementById("textBox").value;
+        temp = Number(temp);
+        temp = toCelsius(temp);
+        document.getElementById("tempLabel").innerHTML = temp + " Degrees C";
+    }
+    else if(document.getElementById("fButton").checked){
+        temp = document.getElementById("textBox").value;
+        temp = Number(temp);
+        temp = toFahrenheit(temp);
+        document.getElementById("tempLabel").innerHTML = temp + " Degrees F";
+    }
+    else {
+        document.getElementById("tempLabel").innerHTML = "Select a unit";
+    }
+}
+
+function toCelsius(temp){
+    return(temp -32) * (5/9);
+}
+                                // CALCULATIONS
+function toFahrenheit(temp){
+    return temp * 9 / 5 + 32;
+}
+
+*/
+// --------------------------------------------------------------------------
+// Arrays - Think of it as a variable that can store multiple values
+// -------------------------------------------------------------------------- 
+/*
+
+let fruits = ["apple", "orange", "banana"];
+
+// fruits[2] = "coconut"
+
+fruits.push("lemon"); // Add an element
+fruits.pop(); // Removes last element
+fruits.unshift("mango"); // Adds element to beginning
+fruits.shift(); // Removes element from beginning
+
+let length = fruits.length;
+let index = fruits.indexOf("orange");
+
+console.log(index);
+
+*/
+// --------------------------------------------------------------------------
+// Loop through the elements of an array
+// --------------------------------------------------------------------------
+/*
+
+// Iterate over the array forwards
+
+let prices = [5, 10, 15, 20, 25];
+
+for(let i = 0; i < prices.length; i+=1){
+    console.log(prices[i]);
+}
+
+// --------------------------------------------------------------------------
+// Iterate over the array backwards
+
+let prices = [5, 10, 15, 20, 25];
+
+for(let i = prices.length -1; i >= 0 ; i-=1){
+    console.log(prices[i]);
+}
+
+// --------------------------------------------------------------------------
+// for up statement
+
+for(let price of prices){
+    console.log(price);
+}
+
+*/
+// --------------------------------------------------------------------------
+// 
+// --------------------------------------------------------------------------
