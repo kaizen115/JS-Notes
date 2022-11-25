@@ -771,5 +771,268 @@ for(let price of prices){
 
 */
 // --------------------------------------------------------------------------
-// 
+// Sort an array of strings
+// --------------------------------------------------------------------------
+/*
+
+let fruits = ["banana", "apple", "orange", "mango"];
+
+fruits = fruits.sort(); // Forward sort
+fruits = fruits.sort().reverse() // Reverse sort
+
+for(let fruit of fruits){
+    console.log(fruit);
+}
+
+*/
+// --------------------------------------------------------------------------
+// 2D Array = An array of arrays
+// --------------------------------------------------------------------------
+/*
+
+let fruits = ["apples", "oranges", "bananas"];
+let veggies = ["carrots", "onions", "potatoes"];
+let meats = ["beef", "pork", "chicken"];
+
+let groceryList = [fruits, veggies, meats];
+
+groceryList[2][1] = "fish";// imagine a grid - first index is a row, second index is a column
+                           // replaces the given index with given data
+
+for(let list of groceryList) {
+    for(let food of list){
+        console.log(food);
+    }
+}
+
+*/
+// --------------------------------------------------------------------------
+// Spread Operator ... - allows an iterable such as an array or string to be expanded in places where
+// zero or more arguments are expected (essentially unpacks the elements)
+// --------------------------------------------------------------------------
+/*
+
+let numbers = [1, 2, 3 , 4 , 5 , 6, 7, 8, 9];
+console.log(...numbers);
+
+// --------------------------------------------------------------------------
+
+let numbers = [1, 2, 3 , 4 , 5 , 6, 7, 8, 9];
+let maximum = Math.max(...numbers);
+console.log(maximum);
+
+// --------------------------------------------------------------------------
+
+let class1 = ["bob", "pat", "sandy"];
+let class2 = ["tim", "matt", "tom"];
+
+class1.push(...class2); // divided into individual arguments
+console.log(...class1); // divided into individual elements
+
+*/
+// --------------------------------------------------------------------------
+// Rest Parameters ... - Represents an indefinite number of parameters
+//                   (Packs arguments into an array)
+// --------------------------------------------------------------------------
+/*
+
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 4;
+let e = 5;
+
+console.log(sum(a, b, c, d, e)); // can also be written as (a, b, ...numbers depending on needs)
+
+function sum(...numbers){
+    let total = 0;
+    for(let number of numbers){
+        total += number
+    }
+    return total
+}
+
+*/
+// --------------------------------------------------------------------------
+// Callbacks - a function passed as an  argument to another function
+// Ensures a function will not run until a task is completed
+// Helps us develop asynchronous code
+// (When one function has to wait for another function)
+// That helps us avoid errors and potential problems
+// Ex. Wait for a file to load
+// --------------------------------------------------------------------------
+/*
+
+sum(2, 3, displayConsole);
+
+function sum(x, y, callBack){
+    let result =  x + y;
+    callBack(result);
+}
+
+function displayConsole(output){
+    console.log(output);
+}
+
+function displayDOM(output){
+    document.getElementById("myLabel").innerHTML = output;
+
+}
+
+*/
+// --------------------------------------------------------------------------
+// array.forEach() - forEach method for arrays - Executes a provided callback function once for each array element
+// --------------------------------------------------------------------------
+/*
+
+let students = ["bob", "pat", "sandy"];
+students.forEach(capitalize);
+students.forEach(print);
+
+function capitalize(element, index, array){
+    array[index] = element[0].toUpperCase() + element.substring(1); // Capitalizes 1st of strings
+}
+
+function print(element){
+    console.log(element);
+}
+
+*/
+// --------------------------------------------------------------------------
+// array.map() - map method for arrays - Executes a provided callback function
+//                                       once for each array element
+//                                       AND creates a new array
+// --------------------------------------------------------------------------
+/*
+
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(square);
+let cubes = numbers.map(cube);
+
+cubes.forEach(print);
+
+function square(element){
+    return Math.pow(element, 2);
+}
+
+function cube(element){
+    return Math.pow(element, 3);
+}
+
+function print(element){
+    console.log(element);
+}
+
+*/
+// --------------------------------------------------------------------------
+// array.filter() - filter method for arrays - Creates a new array with all elements that
+//                                           that pass the test provided by a function
+// --------------------------------------------------------------------------
+/*
+
+let ages = [18, 16, 21, 17, 19, 90];
+
+let adults = ages.filter(checkAge);
+
+adults.forEach(print);
+
+function checkAge(element){
+    return element >=18;
+}
+
+function print(element){
+    console.log(element);
+}
+
+*/
+// --------------------------------------------------------------------------
+// array.reduce() - Reduces an array to a single value
+//                  Good use for this method: to sum up all the values of an array
+//                  for example, items in a shopping cart
+// --------------------------------------------------------------------------
+/*
+
+let prices = [5, 10, 15, 20, 25, 30];
+let total = prices.reduce(checkOut);
+
+console.log(`The total is $${total}`);
+
+function checkOut(total, element){
+    return total + element;
+}
+
+*/
+// --------------------------------------------------------------------------
+// Sort an array of numbers
+// --------------------------------------------------------------------------
+/*
+
+let grades = [100, 50, 90, 60, 80, 70];
+
+grades = grades.sort(descendingSort);// Descending order
+grades = grades.sort(ascendingSort);// Ascending order
+
+grades.forEach(print);
+
+function descendingSort(x, y){
+    return y - x;
+}
+
+function ascendingSort(x, y){
+    return x - y;
+}
+
+function print(element){
+    console.log(element);
+}
+
+*/
+// --------------------------------------------------------------------------
+// Function without a name (anonymous function)
+// Helps avoid polluting the global scope with names
+// Write it, then forget about it
+// --------------------------------------------------------------------------
+/*
+
+const greeting = function(){
+    console.log("Hello!");
+}
+
+greeting(); // invokes the function with variable name without having to think of a function name
+
+// --------------------------------------------------------------------------
+
+// INSTEAD OF THIS:
+
+let count = 0;
+
+function increaseCount(){
+    count+=1;
+    document.getElementById("myLabel").innerHTML = count;
+}
+
+function decreaseCount(){
+    count-=1;
+    document.getElementById("myLabel").innerHTML = count;
+}
+
+// --------------------------------------------------------------------------
+
+// IT'S THIS (No function named):
+
+let count = 0;
+
+document.getElementById("increaseButton").onclick = function(){
+    count+=1;
+    document.getElementById("myLabel").innerHTML = count;
+}
+
+document.getElementById("decreaseButton").onclick = function(){
+    count-=1;
+    document.getElementById("myLabel").innerHTML = count;
+}
+
+*/
+// --------------------------------------------------------------------------
+// Arrow Function Expressions => - A compact alternative to a traditional function
 // --------------------------------------------------------------------------
