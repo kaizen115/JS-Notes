@@ -530,3 +530,93 @@ function happyBirthday(a, b){ // Matching parameters / shortened the arguments t
 // --------------------------------------------------------------------------
 // RETURN - returns a value back to the place where you invoked the function
 // --------------------------------------------------------------------------
+/*
+
+let area;
+let width;
+let height;
+
+width = window.prompt("Enter Width");
+height = window.prompt("Enter Height");
+
+area = getArea(width, height);
+
+console.log("The area is:", area);
+
+function getArea(width, height){
+    return width * height;
+}
+
+*/
+// --------------------------------------------------------------------------
+// Ternary operator -  Shortcut for an if/else statement
+// Takes 3 operands - 1. a condition with ?  2. expression if true  3. expression if false
+// Condition ? exprIfTrue : exprIfFalse
+// --------------------------------------------------------------------------
+/*
+
+ let adult = checkAge(19);
+ console.log(adult);
+
+ function checkAge(age){
+    return age >= 18 ? true : false;
+ }
+
+ // --------------------------------------------------------------------------
+
+ checkWinner(true);
+
+ function checkWinner(win){
+    win ? console.log("YOU WIN!") : console.log("YOU LOSE");
+ }
+
+ */
+// --------------------------------------------------------------------------
+// VARIABLE SCOPE - Where a variable is accessible
+
+// let = variables are limited to a block scope {}
+// var = variables are limited to a function (){}
+
+// Global variable = is declared outside any function
+// (if global, var will CHANGE your browser's window properties)
+// --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
+// Template literals = delimited with (`)
+//                     instead of double or single quotes
+//                     allows embedded variables and expressions
+// --------------------------------------------------------------------------
+/*
+
+INSTEAD OF THIS:
+
+userName = "Bro";
+let items = 3;
+let total = 75;
+
+console.log("Hello", userName);
+console.log("You have", items, "items in your cart");
+console.log("Your total is $", total);
+
+console.log(`Hello ${userName}`);
+console.log(`You have ${items} in your cart`);
+console.log(`Your total is $${total}`);
+
+// --------------------------------------------------------------------------
+// IT'S THIS:
+
+let userName = "Bro";
+let items = 3;
+let total = 75;
+
+let text = 
+`Hello ${userName}
+You have ${items} in your cart
+Your total is $${total}`;
+
+console.log(text);
+
+*/
+// --------------------------------------------------------------------------
+// 
+// --------------------------------------------------------------------------
