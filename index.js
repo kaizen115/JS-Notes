@@ -1035,4 +1035,27 @@ document.getElementById("decreaseButton").onclick = function(){
 */
 // --------------------------------------------------------------------------
 // Arrow Function Expressions => - A compact alternative to a traditional function
+// You DO need curly braces if your function uses more than 1 argument
 // --------------------------------------------------------------------------
+/*
+
+const greeting = userName => console.log(`hello ${userName}`);
+
+greeting("bro");
+
+// --------------------------------------------------------------------------
+
+const percent = (x, y) => x / y * 100;
+
+console.log(`${percent(37, 50)}`);
+
+// --------------------------------------------------------------------------
+
+// SIGNIFICANTLY COMPACTED
+
+let grades = [100, 50, 90, 60, 80, 70];
+
+grades.sort((x, y) => y - x);
+grades.forEach((element) => console.log(element));
+
+*/
