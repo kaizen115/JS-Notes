@@ -1086,5 +1086,58 @@ function shuffle(array){
 
 */
 // --------------------------------------------------------------------------
-// Nested Functions - 
+// Nested Functions - Functions inside other functions
+//                    Outer functions have access to inner funnctions
+//                    Inner functions are "hidden" from outside functions
+//                    Adds data security and is used in closures
+// --------------------------------------------------------------------------
+/*
+
+let userName = "Bro";
+let userInbox = "0";
+
+login();
+
+function login(){
+    displayUserName();
+    displayUserInbox();
+
+    function displayUserName() {
+        console.log(`Welcome ${userName}`);
+    }
+        function displayUserInbox(){
+            console.log(`You have ${userInbox} new messages`);
+        }
+}
+
+*/
+// --------------------------------------------------------------------------
+// Map - Object that holds key-value pairs of any data type
+// --------------------------------------------------------------------------
+/*
+
+const store = new Map([
+    ["T-shirt", 20],
+    ["Jeans", 30],
+    ["Socks", 10],
+    ["Underwear", 10],
+]);
+
+let shoppingCart = 0;
+
+shoppingCart += store.get("T-shirt"); // GET METHOD
+store.set("hat", 40); // SET METHOD
+store.delete("hat"); // DELETE
+console.log(store.has("Jeans")); // HAS 
+console.log(store.size); // SIZE
+console.log(shoppingCart);
+
+store.forEach((value, key) => console.log(`${key} $${value}`));
+
+*/
+// --------------------------------------------------------------------------
+// OBJECT - A group of properties and methods
+// Properties - What an object has
+// Methods - What an object can do
+// Use . to access Properties /  Methods
 // --------------------------------------------------------------------------
