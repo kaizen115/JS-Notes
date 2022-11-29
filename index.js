@@ -1141,3 +1141,79 @@ store.forEach((value, key) => console.log(`${key} $${value}`));
 // Methods - What an object can do
 // Use . to access Properties /  Methods
 // --------------------------------------------------------------------------
+/*
+
+const car = {
+    model:"Mustang",
+    color:"Red",        // PROPERTIES
+    year:2023,
+
+    drive : function(){
+        console.log("You drive the car");
+    },                                      // METHODS
+    brake : function(){
+        console.log("You brake the car");
+    }
+}
+
+const car2 = {
+    model:"Corvette",
+    color:"Blue",        // PROPERTIES
+    year:2024,
+
+    drive : function(){
+        console.log("You drive the car");
+    },                                      // METHODS
+    brake : function(){
+        console.log("You brake the car");
+    }
+}
+
+console.log(car.model);
+console.log(car.color);
+console.log(car.year);
+
+console.log(car2.model);
+console.log(car2.color);
+console.log(car2.year);
+
+car.drive();
+car.brake();
+
+car2.drive();
+car2.brake();
+
+*/
+// --------------------------------------------------------------------------
+// this - reference to a particular object
+//        the object depends on the immediate context
+// --------------------------------------------------------------------------
+/*
+
+const car = {
+    model:"Mustang",
+    color:"Red",
+    year:2023,
+
+    drive : function(){
+        console.log(`You drive the ${this.model}`);
+    }
+}
+
+const car2 = {
+    model:"Corvette",
+    color:"Blue",        
+    year:2024,
+
+    drive : function(){
+        console.log(`You drive the ${this.model}`);
+    }
+}
+
+car.drive();
+car2.drive();
+
+*/
+// --------------------------------------------------------------------------
+//
+// --------------------------------------------------------------------------
